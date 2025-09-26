@@ -3,8 +3,8 @@ import { withUtm } from "../utils/utm";
 
 export default function ProductCard({ product }) {
   return (
-    <article className="group rounded-2x1 border border-neutral-800 bg-neutral-900/40 p-4 sm:p-6">
-      <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-neutral-800">
+    <article className="group mx-auto max-w-md rounded-2x1 border border-neutral-800 bg-neutral-900/40 p-4 sm:p-4">
+      <div className="aspect-[3/3] w-full overflow-hidden rounded-xl bg-neutral-800">
         <img
           src={product.image}
           alt={product.name}
@@ -13,16 +13,18 @@ export default function ProductCard({ product }) {
         />
       </div>
 
-      <div className="mt-4 flex items-start justify-between gap-4">
+      <div className="mt-4 min-h-[56px] sm:min-h-[64px]">
         <div>
-          <h3 className="text-lg font-medium text-neutral-100">
+          <h3 className="text-base sm:text-lg font-medium leading-tight text-neutral-100">
             {product.name}
           </h3>
-          <p className="mt-1 text-sm text-neutral-400">{product.desc}</p>
+          <p className="mt-1 text-xs sm:text-sm leading-snug text-neutral-400">
+            {product.desc}
+          </p>
         </div>
         {product.price != null && (
-          <div className="shrink-0 rounded-full bg-neutral-800 px-3 py-1 text-sm text-neutral-200">
-            ${product.price}
+          <div className="mt-2 inline-flex rounded-full bg-neutral-800 px-2 py-1 text-xs sm:text-sm text-neutral-200">
+            €{product.price}
           </div>
         )}
       </div>

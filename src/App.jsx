@@ -24,11 +24,11 @@ function App() {
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-4 py-16 text-center">
         <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
-          Minimal tees. Maximum comfort.
+          Wear it any way you want
         </h1>
         <p className="mt-4 text-neutral-400">
-          Premium cotton tees with clean, modern designs — built for everyday
-          wear.
+          Premium symmetrical cotton tees with clean, modern designs — built for
+          everyday wear.
         </p>
 
         {/* Carousel placeholder (we add it in M2) */}
